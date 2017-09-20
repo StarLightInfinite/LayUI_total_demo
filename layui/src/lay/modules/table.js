@@ -670,27 +670,27 @@ layui.define(['laytpl', 'laypage', 'layer', 'form'], function(exports){
     var that = this
     ,options = that.config
     ,height = options.height
+	,maxHeight = options.maxHeight
     ,bodyHeight
     ,footer = that.layFooter
-		,head = that.layHeader
-		,headHight = head.height()
-		,footerHight = footer.height();
-		// if(!options.footer){
-		// 	footerHight = 0;
-		// }
-
+	,head = that.layHeader
+	,headHight = head.height()
+	,footerHight = footer.height()||0;
     if(that.fullHeightGap){
       height = _WIN.height() - that.fullHeightGap;
       if(height < 135) height = 135;
       that.elem.css('height', height);
     }
-
     //tbody区域高度
     bodyHeight = parseFloat(height) - parseFloat(that.layHeader.height()) - 1;
     if(options.page){
       bodyHeight = bodyHeight - parseFloat(that.layTool.outerHeight() + 1);
     }
-    that.layMain.css('height', bodyHeight-footerHight);
+    that.layMain.css('height', bodyHeight-parseFloat(footerHight));
+	if(maxHeight){
+		maxHeight = maxHeight - parseFloat(that.layHeader.height())-parseFloat(footerHight)-4
+		that.layMain.css('maxHeight',maxHeight);
+	}
 
   };
 
