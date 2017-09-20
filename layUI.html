@@ -43,7 +43,7 @@ layui.use('table', function(){
     elem : '#tableBox',
     width: 'full',
     height:"full",
-	maxHeight:400,
+	//maxHeight:400,
     page : false,
     footer:true,
     even : true,
@@ -55,21 +55,23 @@ layui.use('table', function(){
       { field: 'item--2', title:'条目2',width : 200,},
       { field: 'item--3', title:'条目3',width : 200,},
       { field: 'item--4', title:'条目4',width : 200,},
-     // { field: 'item5', title:'条目5',width : 200,},
-     // { field: 'item6', title:'条目6',width : 200,fixed:'right'},
+      { field: 'item5', title:'条目5',width : 200,},
+      { field: 'item6', title:'条目6',width : 200,fixed:'right'},
     ]],
     foot:[[
       {field: 'item1',title:'汇总',fixed:'left'},
       {field: 'item--2',title:'数据2'},
       {field: 'item--3',title:'数据3'},
       {field: 'item--4',title:'数据4'},
-     // {field: 'item5',title:'数据5'},
-     // {field: 'item6',title:'数据6',fixed:'right'},
+     {field: 'item5',title:'数据5'},
+      {field: 'item6',title:'数据6',fixed:'right'},
     ]],
     data:[
       {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
       {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
+	  {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
      
+	  
       {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
       {item1:"last","item--2":"last",'item--3':"last","item--4":"last",item5:"last",item6:"last"},
     ]
@@ -81,6 +83,20 @@ layui.use('table', function(){
          cols :_cols,
         data:[
           {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+          {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
+		  {index:"title","rescue":1234,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
           {index:"title","rescue":123,'sosTime':12312,"locationUrl":"wwww.bau.com",licensePlate:"licensePlate",imei:"123"},
           ]
       });
