@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <title>table模块快速使用</title>
   <link rel="stylesheet" href="./layui/dist/css/layui.css" media="all">
-  <script src="./layui/dist/layui.all.js"></script>
+  <script src="./layui/dist/layui.js"></script>
+  <script src="./layui/dist/lay/modules/table.js"></script>
 
   <style>
     .lay-box{
       width: 1024px;
-      height:400px;
     }
     .layui-table-fixed.layui-table-fixed-b{
       top: inherit;
@@ -21,15 +21,13 @@
     }
     #tabBox{
       width: 1200px;
-      height: 300px;
     }
 
     #tabBox .laytable-cell-1-index{
       background: #f5f5f5;
     }
-    .layui-table-foot{
-      margin-top: 1px;
-      border-top:1px solid #e2e2e2 
+    .layui-table-foot td{
+      border-bottom:0
     }
   </style>
 </head>
@@ -44,7 +42,8 @@ layui.use('table', function(){
   var tableIns = table.render({
     elem : '#tableBox',
     width: 'full',
-    height:"400",
+    height:"full",
+	maxHeight:400,
     page : false,
     footer:true,
     even : true,
@@ -56,30 +55,21 @@ layui.use('table', function(){
       { field: 'item--2', title:'条目2',width : 200,},
       { field: 'item--3', title:'条目3',width : 200,},
       { field: 'item--4', title:'条目4',width : 200,},
-      { field: 'item5', title:'条目5',width : 200,},
-      { field: 'item6', title:'条目6',width : 200,fixed:'right'},
+     // { field: 'item5', title:'条目5',width : 200,},
+     // { field: 'item6', title:'条目6',width : 200,fixed:'right'},
     ]],
     foot:[[
       {field: 'item1',title:'汇总',fixed:'left'},
       {field: 'item--2',title:'数据2'},
       {field: 'item--3',title:'数据3'},
       {field: 'item--4',title:'数据4'},
-      {field: 'item5',title:'数据5'},
-      {field: 'item6',title:'数据6',fixed:'right'},
+     // {field: 'item5',title:'数据5'},
+     // {field: 'item6',title:'数据6',fixed:'right'},
     ]],
     data:[
       {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
       {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
-      {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
+     
       {item1:"1","item--2":2,'item--3':3,"item--4":"4",item5:"5",item6:"6"},
       {item1:"last","item--2":"last",'item--3':"last","item--4":"last",item5:"last",item6:"last"},
     ]
